@@ -16,6 +16,10 @@ app.use(cors())
 
 connectDb(Constants.URI)
 
+app.get('/', (req, res) =>{
+    res.send("Hello Xmart Server Running Successfully")
+})
+
 app.use('/users', userRoutes)
 app.use('/category', categoryRoutes)
 app.use('/product', productRoutes)
